@@ -9,7 +9,7 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-            assert "login" in "https://selenium1py.pythonanywhere.com/ru/accounts/login/", f"expected '{login}' to be substring of '{https://selenium1py.pythonanywhere.com/ru/accounts/login/}'"
+            assert "login" in self.url, f"expected '{login}' to be substring of '{self.url}'"
     def should_be_login_form(self):
         # реализуйте проверку, что есть форма логина
         assert self.is_element_present(*LoginPageLocators.LOGIN_USERNAME), "Login username is not presented"
